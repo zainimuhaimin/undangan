@@ -176,11 +176,11 @@
                                 <span>Wishes</span>
                             </a>
                         </li>
-                        <!-- <li>
+                        <li>
                             <a href="#tab-gift">
                                 <span>Gift</span>
                             </a>
-                        </li> -->
+                        </li>
                     </ul>
                 </nav> <!-- end tab-nav -->
 
