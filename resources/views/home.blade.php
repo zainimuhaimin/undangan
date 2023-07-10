@@ -39,7 +39,10 @@
 </head>
 
 <body id="top" class="ss-preload theme-slides">
-
+    <!-- music player -->
+    <audio loop autoplay>
+        <source src="{{url('assets/music/albinadak.mp3')}}" type="audio/filetype">
+    </audio>
 
    <!-- preloader
     ================================================== -->
@@ -205,7 +208,7 @@
                                             </p>
                                         </a>
                                         <br>
-                                        <img src="{{ url('/storage/') }}/{{ $item->photo }}" style="height:500px; widht:auto;">
+                                        <!-- <img src="{{ url('/storage/') }}/{{ $item->photo }}" style="height:500px; widht:auto;"> -->
                                         <p class="desc-bride">
                                             {{ $item->child }}
                                         </p>
@@ -374,7 +377,7 @@
                                     @foreach ($bank as $item)
                                     <div class="column lg-6 tab-12">
                                         <h4>{{ $item->name }}</h4>
-                                        <img src="{{ url('/storage/') }}/{{ $item->logo }}" style="height:30px; widht:auto;">
+                                        <img src="{{ url('/assets/img/') }}/{{ $item->logo }}" style="height:30px; widht:auto;">
                                         <p class="desc">
                                         {{ $item->acc_number }}
                                         <br>a/n {{ $item->acc_name }}
