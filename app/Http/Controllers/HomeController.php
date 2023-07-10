@@ -27,7 +27,7 @@ class HomeController extends Controller
         $gift       = Gift::all();
         $thank      = Thank::all();
         $wish       = Wishes::orderby('id', 'desc')->get();
-        $bank       = Bride::select('brides.name', 'brides.acc_name', 'brides.acc_number', 'brides.bank_id', 'banks.name as bank_name', 'banks.logo')->join('banks', 'banks.id', 'brides.bank_id')->get();
+        $bank       = Bride::select('brides.name', 'brides.acc_name', 'brides.acc_number', 'brides.bank_id', 'banks.name as bank_name', 'banks.logo')->join('banks', 'banks.id', 'brides.bank_id')->limit(1)->orderBy('brides.id', 'desc')->get();
 
         return view('home', compact('bride', 'detail', 'wedding', 'gift', 'bank', 'to', 'thank', 'wish'));
     }
